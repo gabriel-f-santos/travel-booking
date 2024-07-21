@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "@/components/hero/Hero";
-import PopularLocations from "@/components/popular-locations/PopularLocations";
+import Hero from "../components/hero/hero";
+import PopularLocations from "../components/popular-locations/PopularLocations";
 
 
 export default function Home() {
