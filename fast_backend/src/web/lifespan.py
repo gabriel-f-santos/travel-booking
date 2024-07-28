@@ -5,8 +5,8 @@ import beanie
 from fastapi import FastAPI
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from backend.db.models import load_all_models
-from backend.settings import settings
+from src.db.models import load_all_models
+from src.settings import settings
 
 
 async def _setup_db(app: FastAPI) -> None:

@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from backend.db.models.dummy_model import DummyModel
+from src.db.models.dummy_model import DummyModel
 
 
 class DummyDAO:

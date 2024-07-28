@@ -6,8 +6,8 @@ from fastapi import FastAPI
 from httpx import AsyncClient
 from motor.motor_asyncio import AsyncIOMotorClient
 
-from backend.settings import settings
-from backend.web.application import get_app
+from src.settings import settings
+from src.web.application import get_app
 
 
 @pytest.fixture(scope="session")
@@ -28,7 +28,7 @@ async def setup_db() -> AsyncGenerator[None, None]:
     :yield: nothing.
     """
     client = AsyncIOMotorClient(settings.db_url.human_repr())  # type: ignore
-    from backend.db.models import load_all_models
+    from src.db.models import load_all_models
 
     await beanie.init_beanie(
         database=client[settings.db_base],

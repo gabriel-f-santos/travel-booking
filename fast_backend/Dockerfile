@@ -1,6 +1,4 @@
 FROM python:3.11.4-slim-bullseye as prod
-
-
 RUN pip install poetry==1.8.2
 
 # Configuring poetry
@@ -18,7 +16,7 @@ RUN --mount=type=cache,target=/tmp/poetry_cache poetry install --only main
 COPY . /app/src/
 RUN --mount=type=cache,target=/tmp/poetry_cache poetry install --only main
 
-CMD ["/usr/local/bin/python", "-m", "backend"]
+CMD ["/usr/local/bin/python", "-m", "src"]
 
 FROM prod as dev
 

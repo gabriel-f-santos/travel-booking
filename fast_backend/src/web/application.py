@@ -3,8 +3,8 @@ from importlib import metadata
 from fastapi import FastAPI
 from fastapi.responses import UJSONResponse
 
-from backend.web.api.router import api_router
-from backend.web.lifespan import lifespan_setup
+from src.web.api.router import api_router
+from src.web.lifespan import lifespan_setup
 
 
 def get_app() -> FastAPI:
@@ -17,7 +17,7 @@ def get_app() -> FastAPI:
     """
     app = FastAPI(
         title="backend",
-        version=metadata.version("backend"),
+        version="0.1.0",
         lifespan=lifespan_setup,
         docs_url="/api/docs",
         redoc_url="/api/redoc",

@@ -4,7 +4,7 @@ from typing import Union
 
 from loguru import logger
 
-from backend.settings import settings
+from src.settings import settings
 
 
 class InterceptHandler(logging.Handler):
