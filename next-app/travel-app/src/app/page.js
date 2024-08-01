@@ -1,14 +1,24 @@
-import React from "react";
-import Hero from "../components/hero/hero";
-import PopularLocations from "../components/popular-locations/PopularLocations";
+import React from 'react';
+import Hero from '../components/hero/hero';
+import PopularLocations from '../components/popular-locations/PopularLocations';
+import sea from '../../public/assets/sea.jpg';
+import hotel_image from '../../public/assets/hr_10.jpg';
 
 
 export default function Home() {
   return (
     <>
-    <Hero />
-    <PopularLocations />
-    <Hero />
+      <Hero
+        image={sea}
+        mainHeader="Are you ready for an adventure?"
+        secondaryHeader="Brouse through the popular locations"
+      />
+      <PopularLocations />
+      <Hero 
+        image={hotel_image}
+        mainHeader="Get the best offer for you hotel"
+        secondaryHeader="Pick your desired place"      
+      />
     </>
   );
 }
